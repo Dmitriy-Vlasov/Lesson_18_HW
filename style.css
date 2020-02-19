@@ -1,0 +1,103 @@
+body {
+    background-color: #F5F4F9;
+    font-family: 'Comfortaa', cursive;
+    color: #646368;
+}
+
+.header {
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.button {
+    height: 55px;
+    width: 55px;
+    box-shadow: inset 0 0 0 5px #FF5B62;
+    border-radius: 50%;
+    margin-left: 20px;
+    font-size: 40px;
+    font-family: sans-serif;
+    display: inline-block;
+    color: white;
+    transition: all .3s;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 0 28px #FF5B62;
+}
+
+.button:hover p {
+    color: white;
+}
+
+p {
+    color: #FF5B62;
+    transition: color .8s;
+}
+
+.todoListForm {
+    display: flex;
+    align-items: center;
+}
+
+.todoListInput {
+    height: 40px;
+    width: 400px;
+    display: inline-block;
+    border-bottom: 1px solid white;
+    background-color: white;
+    color: #646368;
+    padding: 5px 10px;
+    border: 1px solid rgba(221, 221, 221, 1);
+}
+
+.todoList {
+    background-color: #F5F4F9;
+    min-height: 100vh;
+}
+
+.todoListItem {
+    width: 700px;
+    margin: 14px auto;
+    padding: 15px;
+    background-color: #fff;
+    color: #646368;
+    box-shadow: 0 0 8px 3px rgba(221, 221, 221, 1);
+    display: flex;
+    justify-content: space-between;
+    transition: transform .3s, background-color .3s;
+}
+
+.editButton {
+    margin-right: 30px;
+}
+
+.editButton:hover, .deleteButton:hover {
+    cursor: pointer;
+}
+
+.deleteButton {
+    display: none;
+}
+
+.todoListItem:hover .deleteButton {
+    display: block;
+}
+
+.todoListItem:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.done {
+    background-color: #58CE96;
+}
