@@ -89,6 +89,10 @@ p {
     display: none;
 }
 
+.deleteButton:hover {
+    color: #FF5B62;
+}
+
 .todoListItem:hover .deleteButton {
     display: block;
 }
