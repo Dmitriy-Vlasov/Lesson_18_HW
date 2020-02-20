@@ -29,7 +29,7 @@ function ontodoListClick(e) {
     if($el.hasClass('deleteButton')) {
         deleteDataItem($el);
         setData();
-        deleteItem($el);
+        animateDeleteItem($el);
     } else if ($el.hasClass('todoListItem')) {
         addClassDone($el);
         editDataItem($el);
@@ -56,8 +56,12 @@ function deleteDataItem(el) {
         dataItem.id != el.parent().data('id'));
 }
 
-function deleteItem(el) {
-    el.parent().remove();
+function animateDeleteItem(el) {
+    el.parent().hide(deleteItem);
+}
+
+function deleteItem() {
+    $(this).remove();
 }
 
 function creatNewItemData() {
