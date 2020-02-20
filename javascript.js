@@ -66,7 +66,7 @@ function deleteItem() {
 
 function creatNewItemData() {
     let todoListDataItem = {};
-    todoListDataItem.id = Date.now();
+    todoListDataItem.id = jQuery.now();
     todoListDataItem.content = $('.todoListInput').val();
     todoListDataItem.status = false;
     todoListData.push(todoListDataItem);
