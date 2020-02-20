@@ -4,6 +4,7 @@ const $todoListItemTamplate = $('#todoListItemTemplate').html();
 
 $('#todoListForm').submit(onTodoListFormSubmit);
 $('.todoList').click('.deleteButton', ontodoListClick);
+$('.buttonDeleteAll').click(onDeleteAllButtonClick);
 
 let todoListData = [];
 
@@ -35,6 +36,23 @@ function ontodoListClick(e) {
         editDataItem($el);
         setData();
     }
+}
+
+function onDeleteAllButtonClick() {
+    animateDeleteAllData()
+    deleteAllData()
+    setData();
+}
+function animateDeleteAllData() {
+    $('.todoListItem').slideUp(deleteAllItem);
+}
+
+function deleteAllItem() {
+    $('.todoList').empty();
+}
+
+function deleteAllData() {
+    todoListData = [];
 }
 
 function getData() {
